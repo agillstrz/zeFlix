@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { createContext } from "react";
+import { SkeletonTheme } from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+import "./App.css";
+import { SetUpRouter } from "./router/SetUpRouter";
+export const myFav = createContext(undefined);
 
 function App() {
+  // const [fav, setFav] = useState([]);
+  // const fav = [18];
+  // const handleAddList = (e, id) => {
+  //   e.preventDefault();
+  //   fav.push(id);
+  // };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <>
+    //   <myFav.Provider value={{ fav, handleAddList }}>
+    //     <SetUpRouter />
+    //   </myFav.Provider>
+    // </>
+
+    <>
+      <SkeletonTheme baseColor="#202020" highlightColor="#444">
+        <SetUpRouter />
+      </SkeletonTheme>
+    </>
   );
 }
 
