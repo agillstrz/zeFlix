@@ -17,7 +17,6 @@ function Home() {
     <>
       <div className="">
         <Hero />
-        {/* <GenreHome /> */}
         <Rated />
         <Trend />
       </div>

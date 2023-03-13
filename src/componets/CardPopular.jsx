@@ -8,14 +8,14 @@ function CardPopular({ data: m }) {
       <Link
         to={`/detail/${m.id}`}
         key={m.id}
-        className="w-44 h-60 hover:scale-125 hover:z-[9999] rounded-lg relative overflow-hidden group transition-all duration-200 ease-linear "
+        className="lg:w-44 lg:h-60 h-28 w-44 hover:scale-125 hover:z-[9999] rounded-lg relative overflow-hidden group transition-all duration-200 ease-in "
       >
         <img
           className="absolute group-hover:invisible h-full bottom-0 top-0 left-0 right-0  "
           src={`https://image.tmdb.org/t/p/w500/${m.poster_path}`}
           alt=""
         />
-        <div className="invisible cursor-pointer  bg-black text-white flex-col  h-full group-hover:visible  transition-all duration-300 ease-in">
+        <div className="hidden cursor-pointer  bg-black text-white flex-col  h-full group-hover:flex  transition-all duration-200 ease-in overflow-hidden">
           <div
             className="w-full h-[40%] bg-cover bg-center "
             style={{
@@ -42,17 +42,6 @@ function CardPopular({ data: m }) {
                   {m.release_date}
                 </span>
               </div>
-              {/* <div className="flex gap-x-1 py-1">
-                      <span className="bg-black/60 borders px-1 text-[8px]">
-                        actions
-                      </span>
-                      <span className="bg-black/60 borders px-1 text-[8px]">
-                        actions
-                      </span>
-                      <span className="bg-black/60 borders px-1 text-[8px]">
-                        actions
-                      </span>
-                    </div> */}
               <p className="text-[10px]">{m.overview.slice(0, 120)}...</p>
             </div>
             <span className="text-[10px] text-text hover:text-text/80 pb-3 text-right">

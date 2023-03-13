@@ -26,7 +26,7 @@ function TopRated() {
       <h2 className="text-left px-4 text-white font-bold text-3xl pb-9">
         Top Rating
       </h2>
-      <div className="grid grid-cols-5 place-items-center gap-x-5 gap-y-5">
+      <div className="grid lg:grid-cols-5 grid-cols-2 place-items-center lg:gap-x-5 gap-y-3 lg:gap-y-5">
         {data && !load && data.map((m) => <Card key={m.id} data={m} />)}
         {load &&
           [1, 2, 3, 4, 5, 7, 8, 9, 10].map((m) => (

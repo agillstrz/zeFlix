@@ -38,15 +38,14 @@ function Trend() {
         {data && (
           <div
             onClick={() => navigate("/popular")}
-            className="w-44  hover:w-44 h-60 bg-white flex justify-center group items-center transition-all duration-250 ease-linear cursor-pointer"
+            className="w-44 bg-text relative hover:brightness-125 hover:w-44 h-60 bg-blend-saturation overflow-hidden backdrop-blur  flex justify-center group items-center transition-all duration-250 ease-linear cursor-pointer"
           >
-            <h2 className="flex items-center font-semibold text-main  gap-x-1">
-              view{" "}
-              <span className="hidden   group-hover:block transition-all duration-100 ease-linear">
-                more
-              </span>
-              <HiArrowSmRight className="hidden   group-hover:block text-main" />{" "}
-            </h2>
+            <div className="absolute translate-x-0 font-semibold text-main  group-hover:-translate-x-[200%] flex items-center gap-x-1  transition-all duration-300 ">
+              <h2 className="  ">view more </h2>
+            </div>
+            <span className="absolute group-hover:translate-x-0 translate-x-[70%] flex justify-center items-center w-full h-full transition-all duration-300 ">
+              <HiArrowSmRight size={80} className=" font-bold text-main" />{" "}
+            </span>
           </div>
         )}
       </div>

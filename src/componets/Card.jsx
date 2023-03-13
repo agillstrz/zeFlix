@@ -8,14 +8,14 @@ function Card({ data: m }) {
       <Link
         to={`/detail/${m.id}`}
         key={m.id}
-        className="w-[14rem] h-72 hover:scale-125 hover:z-[9999] rounded-lg relative overflow-hidden group transition-all duration-200 ease-linear "
+        className="lg:w-[14rem] lg:h-72 w-[11rem] h-[17rem] lg:hover:scale-125 hover:z-[9999] rounded-lg relative overflow-hidden group transition-all duration-200 ease-linear "
       >
         <img
-          className="absolute w-full h-full group-hover:invisible bottom-0 top-0 left-0 right-0  "
+          className="absolute w-full h-full lg:group-hover:invisible bottom-0 top-0 left-0 right-0  "
           src={`https://image.tmdb.org/t/p/w500/${m.poster_path}`}
           alt="Poster"
         />
-        <div className="invisible cursor-pointer  bg-black text-white flex-col  h-full group-hover:visible  transition-all duration-300 ease-in">
+        <div className="invisible lg:block hidden cursor-pointer  bg-black text-white flex-col  h-full group-hover:visible  transition-all duration-300 ease-in">
           <div
             className="w-full h-[45%] bg-cover bg-center "
             style={{

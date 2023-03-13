@@ -9,27 +9,27 @@ function Hero() {
     <>
       {show && <ModalVideo show={show} setShow={setShow} video="tcrNsIaQkb4" />}
       <div
-        className=" h-screen flex    items-center  bg-cover bg-center"
+        className=" lg:h-screen h-[50vh] flex    items-center  bg-cover bg-center"
         style={{
           backgroundImage: `url('https://www.themoviedb.org/t/p/original/iVhJ23akvDuB9yVjcKxfowFc8zv.jpg')`,
         }}
       >
         <div className="lg:w-[45%] px-16 w-full flex flex-col gap-y-2 justify-center bg-gradient-to-r from-main to-transparent     h-full ">
-          <h2 className=" text-text/80 text-[4rem] leading-none font-semibold tracking-wide">
+          <h2 className=" text-text/80 text-2xl lg:text-[4rem] leading-none font-semibold tracking-wide">
             The Boys (2019)
           </h2>
-          <p className="text-white text-xl text-justify tracking-normal">
+          <p className="text-white hidden lg:block lg:text-xl text-justify tracking-normal">
             A group of vigilantes known informally as “The Boys” set out to take
             down corrupt superheroes with no more than blue-collar grit and a
             willingness to fight dirty.
           </p>
           <div onClick={() => setShow(true)} className="flex gap-x-3">
-            <button className="hover:bg-text/80 flex items-center gap-x-1 bg-text rounded-lg px-3 text-xl font-semibold py-2 transition-all duration-150 ease-in">
+            <button className="hover:bg-text/80  flex items-center px-5 text-[10px] gap-x-1 bg-text rounded-lg lg:px-3 lg:text-xl font-semibold lg:py-2 t ransition-all duration-150 ease-in">
               <BsPlayCircle /> Watch Trailer
             </button>
             <Link
               to={`/detail/76479`}
-              className="flex items-center gap-x-1 bg-main text-white hover:bg-main/80 rounded-lg px-3 text-xl font-semibold py-2 transition-all duration-150 ease-in"
+              className="flex items-center gap-x-1 bg-main text-white px-5 text-[10px] hover:bg-main/80 rounded-lg lg:px-3 lg:text-xl font-semibold lg:py-2 transition-all duration-150 ease-in"
             >
               <IoMdInformationCircleOutline />
               More information
