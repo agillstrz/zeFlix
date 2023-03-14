@@ -2,7 +2,7 @@ import React from "react";
 import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
 function Footer() {
   return (
-    <div className="flex lg:flex-row flex-col items-center w-full lg:items-start lg:justify-evenly lg:px-20 border border-transparent border-t-text text-white bg-main/10 mt-20 py-10 ">
+    <div className="flex lg:flex-row flex-col items-center w-full lg:items-start lg:justify-evenly lg:px-20 border border-transparent border-t-black  text-white bg-main/10  py-10 ">
       <div className="grid lg:text-lg text-sm lg:grid-cols-4 gap-x-10 px-5 grid-cols-2">
         <div>
           <h2 className="text-3xl font-bold pb-2 text-text">zeFlix</h2>
