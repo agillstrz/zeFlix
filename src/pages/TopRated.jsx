@@ -22,7 +22,7 @@ function TopRated() {
     }, 700);
   }, [page]);
   return (
-    <div className="content">
+    <div className="content min-h-screen">
       <h2 className="text-left px-4 text-white font-bold text-3xl pb-9">
         Top Rating
       </h2>

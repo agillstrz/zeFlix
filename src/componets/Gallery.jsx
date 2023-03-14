@@ -17,8 +17,10 @@ function Gallery({ setBg, data }) {
   return (
     <div className="px-14 bg-main">
       <div className=" pb-3  w-full  relative  ">
-        <h2 className="text-2xl font-semibold my-3 text-white">Gallery</h2>
-        <div className="grid w-full grid-cols-4 gap-x-3 gap-y-3 ">
+        <h2 className="text-2xl font-semibold my-3 text-center lg:text-start text-white">
+          Gallery
+        </h2>
+        <div className="grid w-full lg:grid-cols-4 gap-x-3 gap-y-3 ">
           {data &&
             data.backdrops
               .slice(0, show)

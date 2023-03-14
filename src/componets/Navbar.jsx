@@ -32,12 +32,12 @@ function Navbar() {
   };
   return (
     <div className="absolute py-2 w-full">
-      <div className=" px-14  flex justify-between gap-x-2  w-full items-center">
-        <div className="w-full  items-center flex  gap-x-10  py-5">
-          <div className="font-extrabold text-2xl lett tracking-widest text-text">
+      <div className=" px-4 lg:px-14  flex lg:justify-between gap-x-2  w-full items-center">
+        <div className="w-full  items-center  flex  gap-x-10  py-5">
+          <div className="font-extrabold text-xl  lg:text-2xl lett lg:tracking-widest text-text">
             zeFlix
           </div>
-          <ul className="text-white flex gap-x-5 font-semibold text-xl">
+          <ul className="text-white hidden lg:flex gap-x-5 font-semibold lg:text-xl">
             {nav.map((m, index) => (
               <li
                 key={index}
@@ -57,9 +57,9 @@ function Navbar() {
             ))}
           </ul>
         </div>
-        <form onSubmit={handleSubmit} className="relative flex items-center">
+        <form onSubmit={handleSubmit} className="relative  flex items-center">
           <input
-            className="bg-white/40  focus:bg-black text-white py-2 px-2 rounded-lg "
+            className="bg-white/40  focus:bg-black text-white lg:py-2 py-1 lg:px-2 rounded-lg "
             type="text"
             name=""
             placeholder="Search..."

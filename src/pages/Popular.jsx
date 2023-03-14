@@ -21,7 +21,7 @@ function Popular() {
     }, 700);
   }, [page]);
   return (
-    <div className="content">
+    <div className="content min-h-screen">
       <h2 className="text-left  lg:px-4 text-white font-bold text-3xl pb-3 lg:pb-9">
         Popular
       </h2>

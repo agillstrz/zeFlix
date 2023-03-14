@@ -43,23 +43,25 @@ function Detail() {
             <ModalVideo show={show} setShow={setShow} video={video[0].key} />
           )}
           <div
-            className="  flex flex-col  items-center w-full bg-cover bg-center"
+            className="  flex flex-col h-screen  items-center w-full bg-cover bg-center"
             style={{
               backgroundImage: `url(https://image.tmdb.org/t/p/original/${
                 bg == "" ? data.backdrop_path : bg
               })`,
             }}
           >
-            <div className="content pb-20  w-full flex flex-col justify-center  bg-gradient-to-r from-black to-transparent  h-full ">
-              <p className="text-2xl text-white/80 uppercase">Tv series</p>
-              <h2 className=" text-white text-[4rem] leading-tight font-semibold tracking-wide">
+            <div className="content pb-20   w-full flex flex-col justify-center  bg-gradient-to-r from-black to-transparent  h-full ">
+              <p className="lg:text-2xl tedt-md text-white/80 uppercase lg:mt-0 pt-10">
+                Tv series
+              </p>
+              <h2 className=" text-white lg:text-[4rem] text-md leading-tight font-semibold tracking-wide">
                 {data.name} ({data.first_air_date.slice(0, 4)})
               </h2>
               <div className="flex gap-x-1 py-4">
                 {data.genres.map((m) => (
                   <span
                     key={m.id}
-                    className="px-2 py-1 border border-text rounded-lg text-white"
+                    className="lg:px-2 px-1 py-1 border text-[10px] lg:text-[18px] border-text rounded-lg text-white"
                   >
                     {m.name}
                   </span>
@@ -68,14 +70,14 @@ function Detail() {
               <div className="flex gap-x-2">
                 <button
                   // onClick={(e) => handleAddList(e, data.id)}
-                  className="px-2 py-1 w-56 text-text rounded-lg text-xl border border-text"
+                  className="px-2 py-1 lg:w-56 text-text rounded-lg lg:text-xl border border-text"
                 >
                   Add to watchlist
                 </button>
                 <div className="px-2 flex items-center gap-x-2 py-1 w-56 text-text rounded-lg text-xl ">
                   {data.networks.slice(0, 3).map((m) => (
                     <img
-                      className="h-10"
+                      className="lg:h-10 h-3"
                       src={`https://image.tmdb.org/t/p/w500/${m.logo_path}`}
                       alt=""
                     />
@@ -83,28 +85,35 @@ function Detail() {
                 </div>
               </div>
               <span className="w-full py-[1px] my-5 bg-black"></span>
-              <div className="flex gap-x-2 ">
-                <div className="w-[16%]  ">
+              <div className="flex flex-col lg:flex-row  gap-x-2 ">
+                <div className="w-[16%] hidden lg:block  ">
                   <div
-                    className="w-48 h-60  rounded-lg relative overflow-hidden  bg-cover bg-center "
+                    className="lg:w-48 h-32 w-24 lg:h-60  rounded-lg relative overflow-hidden  bg-cover bg-center "
                     style={{
                       backgroundImage: `url(https://image.tmdb.org/t/p/w500/${data.poster_path})`,
                     }}
                   ></div>
                 </div>
-                <div className="w-[40%] ">
+                <div className="lg:w-[40%] ">
                   <p className="text-white text-lg">{data.overview}</p>
                 </div>
                 <div>
                   <div
-                    className="radial-progress text-text bg-main text-2xl flex items-center"
+                    className="radial-progress lg:hidden text-text bg-main text-md mt-5 flex items-center"
+                    style={{ "--value": 93, "--size": "5rem" }}
+                  >
+                    <AiFillStar />
+                    {Math.floor(data.vote_average * 10) / 10}
+                  </div>
+                  <div
+                    className="radial-progress hidden lg:flex text-text bg-main text-2xl  items-center"
                     style={{ "--value": 93, "--size": "9rem" }}
                   >
                     <AiFillStar />
                     {Math.floor(data.vote_average * 10) / 10}
                   </div>
                 </div>
-                <div className="w-[16%]  ">
+                <div className="lg:w-[16%] lg:block w-full flex j ">
                   <div
                     className="w-64 h-36 flex items-center justify-center saturate-50 hover:saturate-150 rounded-lg relative overflow-hidden  bg-cover bg-center "
                     style={{
