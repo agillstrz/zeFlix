@@ -15,8 +15,8 @@ function Home() {
 
   return (
     <>
-      <div className="">
-        <Hero />
+      <Hero />
+      <div className="lg:px-14 px-2">
         <Rated />
         <Trend />
       </div>
