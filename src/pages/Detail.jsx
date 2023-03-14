@@ -43,15 +43,15 @@ function Detail() {
             <ModalVideo show={show} setShow={setShow} video={video[0].key} />
           )}
           <div
-            className="  flex flex-col h-screen  items-center w-full bg-cover bg-center"
+            className=" flex flex-col h-screen  items-center w-full bg-cover bg-center"
             style={{
               backgroundImage: `url(https://image.tmdb.org/t/p/original/${
                 bg == "" ? data.backdrop_path : bg
               })`,
             }}
           >
-            <div className="content pb-20   w-full flex flex-col justify-center  bg-gradient-to-r from-black to-transparent  h-full ">
-              <p className="lg:text-2xl tedt-md text-white/80 uppercase lg:mt-0 pt-10">
+            <div className=" px-5  lg:pt-32 lg:px-14  pt-28   pb-20   w-full flex flex-col  justify-center  bg-gradient-to-r from-black to-transparent  h-full ">
+              <p className="lg:text-2xl  tedt-md text-white/80 uppercase lg:mt-0 pt-10">
                 Tv series
               </p>
               <h2 className=" text-white lg:text-[4rem] text-md leading-tight font-semibold tracking-wide">
