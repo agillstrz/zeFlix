@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { AiFillStar } from "react-icons/ai";
+import Skeleton from "react-loading-skeleton";
 import { useNavigate } from "react-router-dom";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,10 +17,6 @@ function Rated() {
       rated();
     }, 700);
   }, []);
-  const nextSlide = () => {
-    setSlide(slide + 1);
-    console.log(slide);
-  };
 
   return (
     <div className="w-full  pt-4  overflow-hidden bg-main">
@@ -42,6 +39,13 @@ function Rated() {
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
+        {!data &&
+          [1, 2, 3, 4, 5, 6, 7].map((m) => (
+            <SwiperSlide className="lg:py-10  pt-5">
+              <Skeleton key={m} width="10rem" height="15rem" />
+            </SwiperSlide>
+          ))}
+
         {data &&
           data.results.map((m) => (
             <SwiperSlide className="lg:py-10  pt-5">

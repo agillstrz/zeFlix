@@ -39,7 +39,7 @@ function Gallery({ setBg, data }) {
             onClick={loadImage}
             className={`${
               data.backdrops.length <= show ? "hidden" : ""
-            } w-40 flex justify-center h-12 items-center active:scale-90 bg-text rounded-lg hover:bg-text/80 transition-all duration-150 ease-linear text-white font-bold`}
+            } lg:w-40 w-28 h-10 lg:h-12  flex justify-center items-center active:scale-90 bg-text rounded-lg hover:bg-text/80 transition-all duration-150 ease-linear text-white font-bold`}
           >
             {load ? (
               <>
@@ -52,7 +52,7 @@ function Gallery({ setBg, data }) {
           {show > 4 ? (
             <button
               onClick={() => setShow(4)}
-              className="w-20 flex justify-center h-12 items-center active:scale-90 bg-text rounded-lg hover:bg-text/80 transition-all duration-150 ease-linear text-white font-bold"
+              className="lg:w-40 w-28 h-10 lg:h-12  flex justify-center items-center active:scale-90 bg-text rounded-lg hover:bg-text/80 transition-all duration-150 ease-linear text-white font-bold"
             >
               Close
             </button>

@@ -40,6 +40,12 @@ function Trend() {
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
+        {!data &&
+          [1, 2, 3, 4, 5, 6, 7].map((m) => (
+            <SwiperSlide className="lg:py-10  pt-5">
+              <Skeleton key={m} width="10rem" height="15rem" />
+            </SwiperSlide>
+          ))}
         {data &&
           data.results.map((m) => (
             <SwiperSlide className="lg:py-10 py-5 ">
