@@ -31,10 +31,10 @@ function Navbar() {
     navigate(`/search/${nama}`, { state: nama });
   };
   return (
-    <div className="absolute py-2 w-full">
-      <div className=" px-4 lg:px-14  flex lg:justify-between gap-x-2  w-full items-center">
-        <div className="w-full  items-center  flex  gap-x-10  py-5">
-          <div className="font-extrabold text-xl  lg:text-2xl lett lg:tracking-widest text-text">
+    <div className="lg:absolute lg:pt-0 pt-3  flex flex-col lg:bg-transparent bg-main lg:border-0 border-black border  lg:py-2 w-full">
+      <div className="px-4 lg:px-14 flex lg:justify-between gap-x-2  w-full justify-center  items-center">
+        <div className="lg:w-full  items-center  flex  gap-x-10  lg:py-5">
+          <div className="font-extrabold text-xl  lg:text-2xl leading-none lg:tracking-widest text-text">
             zeFlix
           </div>
           <ul className="text-white hidden lg:flex gap-x-5 font-semibold lg:text-xl">
@@ -57,9 +57,12 @@ function Navbar() {
             ))}
           </ul>
         </div>
-        <form onSubmit={handleSubmit} className="relative  flex items-center">
+        <form
+          onSubmit={handleSubmit}
+          className="relative  w-full lg:w-[16%] flex items-center"
+        >
           <input
-            className="bg-white/40  focus:bg-black text-white lg:py-2 py-1 lg:px-2 rounded-lg "
+            className="bg-white/40 w-full focus:ring-0 focus:outline-none lg:placeholder:px-0 placeholder:px-2 lg:focus:bg-black text-white lg:py-2 py-1 lg:px-2 rounded-lg "
             type="text"
             name=""
             placeholder="Search..."
@@ -81,6 +84,27 @@ function Navbar() {
           <p className="text-white text-sm">Kuze</p>
         </div> */}
       </div>
+      <ul className="flex justify-center lg:hidden text-sm  py-2 text-white gap-x-2">
+        {nav
+          .filter((m) => m.nama !== "Home")
+          .map((m, index) => (
+            <li
+              key={index}
+              className={`cursor-pointer group relative capitalize`}
+            >
+              <NavLink
+                to={`${m.url}`}
+                // to={`${m.url}`}
+                className={({ isActive }) => (isActive ? "text-text " : "")}
+              >
+                {m.nama}
+                <span
+                  className={`absolute bottom-0 group-hover:w-full w-0 transition-all duration-200 ease-in h-1 bg-text left-0`}
+                ></span>
+              </NavLink>
+            </li>
+          ))}
+      </ul>
     </div>
   );
 }

@@ -43,14 +43,14 @@ function Detail() {
             <ModalVideo show={show} setShow={setShow} video={video[0].key} />
           )}
           <div
-            className=" flex flex-col h-screen  items-center w-full bg-cover bg-center"
+            className=" flex flex-col  h-screen  items-center w-full bg-cover bg-center"
             style={{
               backgroundImage: `url(https://image.tmdb.org/t/p/original/${
                 bg == "" ? data.backdrop_path : bg
               })`,
             }}
           >
-            <div className=" px-5  lg:pt-32 lg:px-14  pt-28   pb-20   w-full flex flex-col  justify-center  bg-gradient-to-r from-black to-transparent  h-full ">
+            <div className=" px-5  lg:bg-transparent bg-black/20 lg:pt-32 lg:px-14  pt-28   pb-20   w-full flex flex-col  justify-center  bg-gradient-to-r from-black to-transparent  h-full ">
               <p className="lg:text-2xl  tedt-md text-white/80 uppercase lg:mt-0 pt-10">
                 Tv series
               </p>
@@ -70,7 +70,7 @@ function Detail() {
               <div className="flex gap-x-2">
                 <button
                   // onClick={(e) => handleAddList(e, data.id)}
-                  className="px-2 py-1 lg:w-56 text-text rounded-lg lg:text-xl border border-text"
+                  className="px-2 py-1 text-sm lg:w-56 text-text rounded-lg lg:text-xl border border-text"
                 >
                   Add to watchlist
                 </button>

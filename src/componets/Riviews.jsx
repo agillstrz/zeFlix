@@ -29,7 +29,7 @@ function Riviews({ id }) {
                         />
                       </div>
                     </div>
-                    <p className="text-white lg:text-[20px] text-[12px]">
+                    <p className="text-white lg:text-[20px] text-[10px]">
                       {m.author}
                     </p>
                   </div>

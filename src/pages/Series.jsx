@@ -24,7 +24,7 @@ function Series() {
   return (
     <>
       <div className="content">
-        <h2 className="text-left  lg:px-4 text-white font-bold text-3xl pb-9">
+        <h2 className="lg:text-left text-center  lg:px-4 text-white font-bold text-3xl pb-3 lg:pb-9">
           All Series
         </h2>
         <div className="grid lg:grid-cols-5 grid-cols-2 place-items-center lg:gap-x-5 gap-y-3 lg:gap-y-5">

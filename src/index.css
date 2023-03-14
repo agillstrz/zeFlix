@@ -6,5 +6,5 @@
   @apply border border-white;
 }
 .content {
-  @apply lg:pt-32 lg:px-14 px-2 pt-24;
+  @apply lg:pt-32 lg:px-14 px-2 pt-5;
 }
