@@ -23,7 +23,7 @@ function Trend() {
   return (
     <div className="w-full  pt-4  overflow-hidden bg-main">
       <div className=" pb-3  w-full  relative  ">
-        <h2 className="text-2xl capitalize text-white  cursor-pointer font-semibold">
+        <h2 className="lg:text-2xl capitalize text-white  cursor-pointer font-semibold">
           Popular
         </h2>
         <span className="h-1  w-full absolute  bottom-0  px-14 bg-black"></span>
@@ -42,10 +42,10 @@ function Trend() {
       >
         {data &&
           data.results.map((m) => (
-            <SwiperSlide className="py-10">
-              <div className="lg:w-44  lg:h-60 h-[14rem] w-44  relative hover:z-[999] lg:hover:scale-125 rounded-lg  overflow-clip  group transition-all duration-200 ease-in ">
+            <SwiperSlide className="lg:py-10 py-5 ">
+              <div className="lg:w-44  lg:h-60 h-[15rem] w-72  relative hover:z-[999] lg:hover:scale-125 rounded-lg  overflow-clip  group transition-all duration-200 ease-in ">
                 <img
-                  className="lg:w-44 lg:h-60 h-[14rem] w-44 lg:group-hover:hidden"
+                  className="lg:w-44 lg:h-60 h-[15rem] w-44 lg:group-hover:hidden"
                   src={`https://image.tmdb.org/t/p/w500/${m.poster_path}`}
                   alt=""
                 />
