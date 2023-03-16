@@ -1,6 +1,6 @@
 const CONSTANT = {
   BASE_URL: "https://api.themoviedb.org/3",
-  API_KEY: "778ac1ff6fa3371c8763ee6d522ca71c",
+  API_KEY: process.env.REACT_APP_API_KEY,
   foto: "https://www.themoviedb.org/t/p",
 };
 
