@@ -12,7 +12,6 @@ import Rated from "../componets/Rated";
 import Footer from "../componets/Footer";
 function Home() {
   const [scroll, setScroll] = useState(false);
-  console.log(process.env.REACT_APP_API_KEY);
   return (
     <>
       <Hero />

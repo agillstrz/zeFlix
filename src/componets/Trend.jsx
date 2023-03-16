@@ -37,8 +37,6 @@ function Trend() {
             slidesPerView: 5,
           },
         }}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
       >
         {!data &&
           [1, 2, 3, 4, 5, 6, 7].map((m) => (

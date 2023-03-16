@@ -9,7 +9,7 @@ function Genre() {
       <h2 className="lg:text-left text-center  lg:px-4 text-white font-bold text-3xl pb-3 lg:pb-9">
         Genre
       </h2>
-      <div className="grid content lg:grid-cols-5 place-items-center grid-cols-2 gap-y-4">
+      <div className="grid  lg:grid-cols-5 place-items-center grid-cols-2 gap-y-4">
         {genre.map((m) => (
           <Link
             key={m.id}
