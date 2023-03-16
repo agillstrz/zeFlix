@@ -40,7 +40,7 @@ function Detail() {
       {data && gallery && (
         <>
           {show && (
-            <ModalVideo show={show} setShow={setShow} video={video[0].key} />
+            <ModalVideo show={show} setShow={setShow} video={video[0]?.key} />
           )}
           <div
             className=" flex flex-col  min-h-screen  items-center w-full bg-cover bg-center"
@@ -121,8 +121,8 @@ function Detail() {
                     style={{
                       backgroundImage: `url(https://image.tmdb.org/t/p/w500/${
                         gallery.backdrops.length <= 1
-                          ? gallery.backdrops[0].file_path
-                          : gallery.backdrops[2].file_path
+                          ? gallery.backdrops[0]?.file_path
+                          : gallery.backdrops[2]?.file_path
                       })`,
                     }}
                   >
