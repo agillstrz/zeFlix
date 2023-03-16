@@ -33,7 +33,7 @@ function Detail() {
       getVideo();
     }, 700);
   }, []);
-
+  console.log(video);
   return (
     <>
       {!data && <Loading />}
@@ -50,12 +50,13 @@ function Detail() {
               })`,
             }}
           >
-            <div className=" px-5  lg:bg-transparent bg-black/20 lg:pt-32 lg:px-14  pt-5   pb-20   w-full flex flex-col  justify-center  bg-gradient-to-r from-black to-transparent  h-full ">
+            <div className=" px-5  lg:bg-transparent bg-black/20 lg:pt-32 lg:px-14  pt-5   pb-20   w-full flex flex-col  justify-center  bg-gradient-to-r from-black to-transparent   min-h-screen   ">
               <p className="lg:text-2xl  tedt-md text-white/80 uppercase lg:mt-0 pt-10">
                 Tv series
               </p>
               <h2 className=" text-white lg:text-[4rem] text-md leading-tight font-semibold tracking-wide">
-                {data.name} ({data.first_air_date.slice(0, 4)})
+                {data.title ? data.title : data.name} (
+                {data.first_air_date?.slice(0, 4)})
               </h2>
               <div className="flex gap-x-1 py-4">
                 {data.genres.map((m) => (
@@ -75,7 +76,7 @@ function Detail() {
                   Add to watchlist
                 </button>
                 <div className="px-2 flex items-center gap-x-2 py-1 w-56 text-text rounded-lg text-xl ">
-                  {data.networks.slice(0, 3).map((m) => (
+                  {data.networks?.slice(0, 3).map((m) => (
                     <img
                       className="lg:h-10 h-3"
                       src={`https://image.tmdb.org/t/p/w500/${m.logo_path}`}

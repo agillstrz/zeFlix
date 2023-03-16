@@ -47,8 +47,8 @@ function Rated() {
           ))}
 
         {data &&
-          data.results.map((m) => (
-            <SwiperSlide className="lg:py-10  pt-5">
+          data.results.slice(10, 20).map((m) => (
+            <SwiperSlide className="lg:py-8  py-5">
               <div
                 onClick={() => navigate(`/detail/${m.id}`)}
                 className="lg:w-44  lg:h-60 h-[14rem] w-44  relative hover:z-[999] lg:hover:scale-125 rounded-lg  overflow-clip  group transition-all duration-200 ease-in "

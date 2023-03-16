@@ -4,13 +4,13 @@ import zeflix from "../api/get.api";
 import Card from "../componets/Card";
 import GoToTop from "../componets/GoToTop";
 import Pagination from "../componets/Pagination";
-function Series() {
+function Movies() {
   const [data, setData] = useState("");
   const [load, setLoad] = useState(false);
   const [page, setPage] = useState(1);
 
   const allSeries = () => {
-    zeflix.getSeries(page).then((res) => setData(res.data.results));
+    zeflix.getMovies(page).then((res) => setData(res.data.results));
   };
 
   useEffect(() => {
@@ -20,10 +20,10 @@ function Series() {
       setLoad(false);
     }, 700);
   }, [page]);
-
+  console.log(data);
   return (
     <>
-      <div className="content">
+      <div className="content min-h-screen">
         <h2 className="lg:text-left text-center  lg:px-4 text-white font-bold text-3xl pb-3 lg:pb-9">
           All Series
         </h2>
@@ -49,4 +49,4 @@ function Series() {
   );
 }
 
-export default Series;
+export default Movies;

@@ -7,7 +7,7 @@ import Genre from "../pages/Genre";
 import Home from "../pages/Home";
 import Layout from "../pages/Layout";
 import Popular from "../pages/Popular";
-import Series from "../pages/Series";
+import Movies from "../pages/Movies";
 import TopRated from "../pages/TopRated";
 
 export const SetUpRouter = () => {
@@ -18,7 +18,7 @@ export const SetUpRouter = () => {
           <Route index element={<Home />} />
           <Route path="detail/:id" element={<Detail />} />
           <Route path="genre/:id" element={<ByGenre />} />
-          <Route path="series" element={<Series />} />
+          <Route path="movies" element={<Movies />} />
           <Route path="genre" element={<Genre />} />
           <Route path="popular" element={<Popular />} />
           <Route path="rated" element={<TopRated />} />

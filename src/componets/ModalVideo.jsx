@@ -1,15 +1,19 @@
+import { Button, Modal } from "flowbite-react";
 import React from "react";
 import ReactPlayer from "react-player";
 
 function ModalVideo({ show, setShow, video }) {
   return (
     <>
-      <input checked={show} type="checkbox" className="modal-toggle" />
-      <div className="modal">
-        <div className="modal-box  min-h-[80%] p-0 min-w-[80%] relative">
+      <div
+        className={`${
+          show ? "" : "hidden"
+        }fixed flex items-center justify-center  h-screen w-screen bg-black/30 backdrop-blur-sm z-[999]`}
+      >
+        <div className="relative w-full mx-20">
           <label
             onClick={() => setShow(!show)}
-            className="btn btn-sm btn-circle absolute right-2 top-2"
+            className=" rounded-full absolute text-white text-[32px] lg:h-14 lg:w-14 flex items-center justify-center cursor-pointer hover:bg-text/80 bg-text  right-2 top-2"
           >
             ✕
           </label>

@@ -21,7 +21,7 @@ function Trend() {
     }, 700);
   }, []);
   return (
-    <div className="w-full  pt-4  overflow-hidden bg-main">
+    <div className="w-full  overflow-hidden bg-main">
       <div className=" pb-3  w-full  relative  ">
         <h2 className="lg:text-2xl capitalize text-white  cursor-pointer font-semibold">
           Popular
@@ -40,13 +40,13 @@ function Trend() {
       >
         {!data &&
           [1, 2, 3, 4, 5, 6, 7].map((m) => (
-            <SwiperSlide className="lg:py-10  pt-5">
+            <SwiperSlide className="lg:py-5  pt-5">
               <Skeleton key={m} width="10rem" height="15rem" />
             </SwiperSlide>
           ))}
         {data &&
           data.results.map((m) => (
-            <SwiperSlide className="lg:py-10 py-5 ">
+            <SwiperSlide className="lg:py-8  py-5 ">
               <div
                 onClick={() => navigate(`/detail/${m.id}`)}
                 className="lg:w-44  lg:h-60 h-[14rem] w-44  relative hover:z-[999] lg:hover:scale-125 rounded-lg  overflow-clip  group transition-all duration-200 ease-in "

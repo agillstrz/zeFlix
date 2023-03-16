@@ -25,6 +25,7 @@ function Riviews({ id }) {
                     <div className="avatar">
                       <div className="lg:w-10 lg:h-10 h-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img
+                          className="h-10 rounded-full"
                           src={`https://spesialis1.orthopaedi.fk.unair.ac.id/wp-content/uploads/2021/02/depositphotos_39258143-stock-illustration-businessman-avatar-profile-picture.jpg}`}
                         />
                       </div>
