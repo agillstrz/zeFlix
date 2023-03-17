@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from "react";
-import Skeleton from "react-loading-skeleton";
 import zeflix from "../api/get.api";
 import Pagination from "../componets/Pagination";
 import Card from "../componets/Card";
 import GoToTop from "../componets/GoToTop";
+import CONSTANT from "../utils/constants";
+import axios from "axios";
+import Skeleton from "../componets/Loader/Skeleton";
 function Popular() {
-  const [data, setData] = useState("");
+  const [data, setData] = useState([]);
   const [load, setLoad] = useState(false);
   const [page, setPage] = useState(1);
 
-  const popular = () => {
-    zeflix.getPopular(page).then((res) => setData(res.data.results));
-  };
-  const [first, setfirst] = useState("");
   useEffect(() => {
     setLoad(true);
     setTimeout(() => {
-      setLoad(false);
-      popular();
+      zeflix.getPopular(page).then((res) => {
+        setLoad(false);
+        setData(res.data.results);
+      });
     }, 700);
   }, [page]);
   return (
@@ -27,10 +27,12 @@ function Popular() {
       </h2>
 
       <div className="grid lg:grid-cols-5  grid-cols-3 place-items-center lg:gap-x-5 gap-y-3 lg:gap-y-5">
-        {data && !load && data.map((m) => <Card key={m.id} data={m} />)}
+        {data && !load && data?.map((m) => <Card key={m.id} data={m} />)}
+      </div>
+      <div className="grid lg:grid-cols-5  grid-cols-3 place-items-center lg:gap-x-5 gap-y-3 lg:gap-y-5">
         {load &&
-          [1, 2, 3, 4, 5, 7, 8, 9, 10].map((m) => (
-            <Skeleton key={m} width="7rem" height="9rem" />
+          [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((m) => (
+            <Skeleton key={m} style="lg:w-[14rem] lg:h-72 w-[7rem] h-[9rem" />
           ))}
       </div>
 

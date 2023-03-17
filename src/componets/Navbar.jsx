@@ -33,7 +33,7 @@ function Navbar() {
   };
   return (
     <div
-      className={` absolute z-[99] lg:pt-0 pt-3  flex flex-col lg:bg-transparent  lg:py-2 w-full`}
+      className={` absolute z-[99] lg:pt-0 pt-3  flex flex-col lg:bg-transparent   lg:py-2 w-full`}
     >
       <div className="px-4  lg:px-14 flex lg:justify-between gap-x-2  w-full justify-center  items-center">
         <div className="lg:w-full  items-center  flex  gap-x-10  lg:py-5">

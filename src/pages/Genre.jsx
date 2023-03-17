@@ -21,7 +21,7 @@ function Genre() {
             }}
           >
             <div className="w-full h-full bg-main/50 brightness-150  flex justify-center items-center">
-              <p className="text-text tracking-widest text-center font-bold text-2xl ">
+              <p className="text-text tracking-widest text-center font-bold lg:text-2xl ">
                 {m.name}
               </p>
             </div>

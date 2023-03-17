@@ -8,20 +8,17 @@ function AllSeries() {
   let location = useLocation();
   //   const [nama, setNama] = useState(location.state);
   const { nama } = useParams();
-
   const [data, setData] = useState("");
   const [load, setLoad] = useState(false);
-  const Search = () => {
-    zeflix.getSearch(nama).then((res) => {
-      setLoad(true);
-
-      setData(res.data.results);
-      setLoad(false);
-    });
-  };
 
   useEffect(() => {
-    Search();
+    setLoad(true);
+    setTimeout(() => {
+      zeflix.getSearch(nama).then((res) => {
+        setLoad(false);
+        setData(res.data.results);
+      });
+    }, 700);
   }, [nama, location]);
 
   return (

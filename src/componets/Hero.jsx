@@ -38,12 +38,12 @@ function Hero() {
               movies.results.slice(0, 3).map((m) => (
                 <div
                   key={m.id}
-                  className=" lg:h-screen relative h-[60vh] flex  w-full   items-center  bg-cover bg-center"
+                  className="   lg:h-screen relative h-[60vh] flex  w-full   items-center  bg-cover bg-center"
                   style={{
                     backgroundImage: `url(https://image.tmdb.org/t/p/original/${m?.backdrop_path})`,
                   }}
                 >
-                  <div className="bg-gradient-to-t from-main/60 lg:from-main to-transparent absolute h-10 lg:h-36 w-full  bottom-0 "></div>
+                  <div className="bg-gradient-to-t   from-main/70 lg:from-main to-transparent absolute h-20 lg:h-36 w-full  bottom-0 "></div>
                   <div className="lg:w-[45%]  brightness-110 lg:brightness-100 lg:px-16  w-full flex flex-col gap-y-2 lg:justify-center justify-end lg:items-start  items-start     lg:bg-gradient-to-r from-main to-transparent     h-full ">
                     <h2 className=" text-text/80  pl-3 lg:pl-0 text-[20px] lg:w-full w-[60%]  lg:text-[4rem] text-left lg:text-left leading-none font-semibold tracking-wide">
                       {m.title ? m.title : m.name}

@@ -33,13 +33,12 @@ function Detail() {
       getVideo();
     }, 700);
   }, []);
-  console.log(video);
   return (
     <>
       {!data && <Loading />}
       {data && gallery && (
         <>
-          {show && (
+          {show && video && (
             <ModalVideo show={show} setShow={setShow} video={video[0]?.key} />
           )}
           <div
@@ -50,11 +49,11 @@ function Detail() {
               })`,
             }}
           >
-            <div className=" px-5  lg:bg-transparent bg-black/20 lg:pt-32 lg:px-14  pt-5   pb-20   w-full flex flex-col  justify-center  bg-gradient-to-r from-black to-transparent   min-h-screen   ">
-              <p className="lg:text-2xl  tedt-md text-white/80 uppercase lg:mt-0 pt-10">
+            <div className=" px-5  lg:bg-transparent bg-black/20 lg:pt-32 lg:px-14  pt-20   pb-20   w-full flex flex-col  justify-center  bg-gradient-to-r from-black to-transparent   min-h-screen   ">
+              <p className="lg:text-2xl  text-[20px] text-white/80 uppercase lg:mt-0 pt-10">
                 Tv series
               </p>
-              <h2 className=" text-white lg:text-[4rem] text-md leading-tight font-semibold tracking-wide">
+              <h2 className=" text-white lg:text-[4rem] text-[19px] leading-tight font-semibold tracking-wide">
                 {data.title ? data.title : data.name} (
                 {data.first_air_date?.slice(0, 4)})
               </h2>
@@ -96,7 +95,7 @@ function Detail() {
                   ></div>
                 </div>
                 <div className="lg:w-[40%] ">
-                  <p className="text-white text-[11px] lg:text-lg">
+                  <p className="text-white text-[13px] lg:text-lg">
                     {data.overview}
                   </p>
                 </div>
@@ -108,9 +107,9 @@ function Detail() {
                     </div>
                   </div>
                 </div>
-                <div className="lg:w-[16%] lg:block w-full flex j ">
+                <div className="lg:w-[16%] flex justify-center lg:block w-full  ">
                   <div
-                    className="w-64 h-36 flex items-center justify-center saturate-50 hover:saturate-150 rounded-lg relative overflow-hidden  bg-cover bg-center "
+                    className="lg:w-64 w-full h-52 lg:h-36 flex items-center justify-center saturate-50 hover:saturate-150 rounded-lg relative overflow-hidden  bg-cover bg-center "
                     style={{
                       backgroundImage: `url(https://image.tmdb.org/t/p/w500/${
                         gallery.backdrops.length <= 1

@@ -10,10 +10,10 @@ function ModalVideo({ show, setShow, video }) {
           show ? "" : "hidden"
         }fixed flex items-center justify-center  h-screen w-screen bg-black/30 backdrop-blur-sm z-[999]`}
       >
-        <div className="relative w-full mx-20">
+        <div className="relative w-full lg:mx-20">
           <label
             onClick={() => setShow(!show)}
-            className=" rounded-full absolute text-white text-[32px] lg:h-14 lg:w-14 flex items-center justify-center cursor-pointer hover:bg-text/80 bg-text  right-2 top-2"
+            className=" rounded-full absolute text-white text-[20px] px-2 lg:text-[32px] lg:h-14 lg:w-14 flex items-center justify-center cursor-pointer hover:bg-text/80 bg-text  right-2 top-2"
           >
             ✕
           </label>

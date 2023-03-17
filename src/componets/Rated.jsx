@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { AiFillStar } from "react-icons/ai";
-import Skeleton from "react-loading-skeleton";
 import { Link, useNavigate } from "react-router-dom";
 import { MdArrowForwardIos } from "react-icons/md";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import zeflix from "../api/get.api";
+import Skeleton from "./Loader/Skeleton";
 function Rated() {
   const [data, setData] = useState("");
   const [slide, setSlide] = useState(0);
@@ -48,20 +48,20 @@ function Rated() {
       >
         <div
           onClick={() => navigate("rated")}
-          className="lg:hidden hover:black  z-[9999]  absolute  flex justify-end  right-0 top-[3px] mb-10 items-center rounded-sm text-[10px] px-[2px]  text-white hover:text-text"
+          className="lg:hidden hover:black  z-[9999]  absolute  flex justify-end  right-0 top-[3px]  items-center rounded-sm text-[15px] px-[2px]  text-white hover:text-text"
         >
-          Lebih banyak <MdArrowForwardIos className="text-[9px]" />
+          Lebih banyak <MdArrowForwardIos className="text-[12px]" />
         </div>
         {!data &&
           [1, 2, 3, 4, 5, 6, 7].map((m) => (
             <SwiperSlide key={m} className="lg:py-10  pt-5">
-              <Skeleton width="10rem" height="15rem" />
+              <Skeleton style="lg:w-[12rem] h-[11rem] w-[114px]  lg:h-[17rem]" />
             </SwiperSlide>
           ))}
 
         {data &&
           data.results.slice(10, 20).map((m) => (
-            <SwiperSlide key={m.id} className="lg:py-6 pt-6 lg:pt-6">
+            <SwiperSlide key={m.id} className="lg:py-6 pt-8 lg:pt-6">
               <div
                 onClick={() => navigate(`/detail/${m.id}`)}
                 className="lg:w-[12rem] h-[11rem] w-[114px]  lg:h-[17rem] relative  lg:hover:scale-[1.15] rounded-lg  overflow-clip  group transition-all duration-150 ease-in "
