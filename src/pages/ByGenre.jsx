@@ -36,10 +36,10 @@ function ByGenre() {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-5 grid-cols-2 place-items-center lg:gap-x-5 gap-y-3 lg:gap-y-5">
+        <div className="grid lg:grid-cols-5 grid-cols-3 place-items-center lg:gap-x-5 gap-y-3 lg:gap-y-5">
           {load &&
             [1, 2, 3, 4, 5].map((m) => (
-              <Skeleton key={m} height="18rem" width="14rem" />
+              <Skeleton key={m} width="7rem" height="9rem" />
             ))}
           {!load && data && data.map((m) => <Card key={m.id} data={m} />)}
         </div>

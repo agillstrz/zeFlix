@@ -8,7 +8,7 @@ function Card({ data: m }) {
       <Link
         to={`/detail/${m.id}`}
         key={m.id}
-        className="lg:w-[14rem] lg:h-72 w-[11rem] h-[17rem] lg:hover:scale-125 hover:z-[9999] rounded-lg relative overflow-hidden group transition-all duration-200 ease-linear "
+        className="lg:w-[14rem] lg:h-72 w-[7rem] h-[9rem] lg:hover:scale-125 hover:z-[9999] rounded-lg relative overflow-hidden group transition-all duration-200 ease-linear "
       >
         <img
           className="absolute w-full h-full lg:group-hover:invisible bottom-0 top-0 left-0 right-0  "

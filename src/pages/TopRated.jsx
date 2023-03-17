@@ -26,11 +26,11 @@ function TopRated() {
       <h2 className="lg:text-left text-center  lg:px-4 text-white font-bold text-3xl pb-3 lg:pb-9">
         Top Rating
       </h2>
-      <div className="grid lg:grid-cols-5 grid-cols-2 place-items-center lg:gap-x-5 gap-y-3 lg:gap-y-5">
+      <div className="grid lg:grid-cols-5 grid-cols-3 place-items-center lg:gap-x-5 gap-y-3 lg:gap-y-5">
         {data && !load && data.map((m) => <Card key={m.id} data={m} />)}
         {load &&
           [1, 2, 3, 4, 5, 7, 8, 9, 10].map((m) => (
-            <Skeleton key={m} width="14rem" height="18rem" />
+            <Skeleton key={m} width="7rem" height="9rem" />
           ))}
       </div>
       <Pagination setPage={setPage} page={page} />

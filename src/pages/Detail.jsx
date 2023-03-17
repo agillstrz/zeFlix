@@ -86,7 +86,7 @@ function Detail() {
                 </div>
               </div>
               <span className="w-full py-[1px] my-5 bg-black"></span>
-              <div className="flex flex-col lg:flex-row  gap-x-2 ">
+              <div className="flex flex-col lg:gap-y-0 gap-y-3 lg:flex-row  gap-x-2 ">
                 <div className="w-[16%] hidden lg:block  ">
                   <div
                     className="lg:w-48 h-32 w-24 lg:h-60  rounded-lg relative overflow-hidden  bg-cover bg-center "
@@ -101,19 +101,11 @@ function Detail() {
                   </p>
                 </div>
                 <div>
-                  <div
-                    className="radial-progress lg:hidden text-text bg-main text-md mt-5 flex items-center"
-                    style={{ "--value": 93, "--size": "5rem" }}
-                  >
-                    <AiFillStar />
-                    {Math.floor(data.vote_average * 10) / 10}
-                  </div>
-                  <div
-                    className="radial-progress hidden lg:flex text-text bg-main text-2xl  items-center"
-                    style={{ "--value": 93, "--size": "9rem" }}
-                  >
-                    <AiFillStar />
-                    {Math.floor(data.vote_average * 10) / 10}
+                  <div className="hidden lg:block  h-20 w-20 bg-main border-text rounded-full">
+                    <div className="h-20 w-20 flex justify-center items-center text-text border-[7px] border-text rounded-full">
+                      <AiFillStar />
+                      {Math.floor(data.vote_average * 10) / 10}
+                    </div>
                   </div>
                 </div>
                 <div className="lg:w-[16%] lg:block w-full flex j ">

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { IoMdInformationCircleOutline } from "react-icons/io";
-import { BsPlayCircle } from "react-icons/bs";
+import { BsFillPlayCircleFill, BsPlayCircle } from "react-icons/bs";
 import ModalVideo from "./ModalVideo";
 import { Link } from "react-router-dom";
 import zeFlix from "../api/get.api";
@@ -38,14 +38,14 @@ function Hero() {
               movies.results.slice(0, 3).map((m) => (
                 <div
                   key={m.id}
-                  className=" lg:h-screen relative h-[50vh] flex  w-full   items-center  bg-cover bg-center"
+                  className=" lg:h-screen relative h-[60vh] flex  w-full   items-center  bg-cover bg-center"
                   style={{
                     backgroundImage: `url(https://image.tmdb.org/t/p/original/${m?.backdrop_path})`,
                   }}
                 >
-                  <div className="bg-gradient-to-t from-main to-transparent absolute h-36 w-full  bottom-0 "></div>
-                  <div className="lg:w-[45%] lg:px-16 w-full flex flex-col gap-y-2 lg:justify-center justify-center lg:items-start  items-center     bg-gradient-to-r from-main to-transparent     h-full ">
-                    <h2 className=" text-text/80 text-[2rem] lg:text-[4rem] text-center lg:text-left leading-none font-semibold tracking-wide">
+                  <div className="bg-gradient-to-t from-main/60 lg:from-main to-transparent absolute h-10 lg:h-36 w-full  bottom-0 "></div>
+                  <div className="lg:w-[45%]  brightness-110 lg:brightness-100 lg:px-16  w-full flex flex-col gap-y-2 lg:justify-center justify-end lg:items-start  items-start     lg:bg-gradient-to-r from-main to-transparent     h-full ">
+                    <h2 className=" text-text/80  pl-3 lg:pl-0 text-[20px] lg:w-full w-[60%]  lg:text-[4rem] text-left lg:text-left leading-none font-semibold tracking-wide">
                       {m.title ? m.title : m.name}
                     </h2>
                     <p className="text-white hidden lg:block lg:text-xl text-justify tracking-normal">
@@ -53,7 +53,7 @@ function Hero() {
                     </p>
                     <div
                       onClick={() => setShow(true)}
-                      className="flex gap-x-3 lg:text-[10px] text-[13px] "
+                      className="lg:flex  hidden  w-full gap-x-3 lg:text-[10px] text-[13px] "
                     >
                       <button className="hover:bg-text/80  flex items-center py-2 px-2  gap-x-1 bg-text rounded-lg lg:px-3 lg:text-xl font-semibold lg:py-2 t ransition-all duration-150 ease-in">
                         <BsPlayCircle /> Watch Trailer
@@ -65,6 +65,13 @@ function Hero() {
                         <IoMdInformationCircleOutline />
                         More information
                       </Link>
+                    </div>
+
+                    <div className="flex   lg:hidden pb-1 justify-end w-full pr-3  ">
+                      <BsFillPlayCircleFill
+                        className="text-text  active:scale-95 transition-all duration-150"
+                        size={60}
+                      />
                     </div>
                   </div>
                   <div className="lg:w-[55%] w-0  bg-gradient-to-l h-full  from-main/40 to-transparent "></div>
