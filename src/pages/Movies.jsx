@@ -30,7 +30,10 @@ function Movies() {
           {data && !load && data.map((m) => <Card key={m.id} data={m} />)}
           {load &&
             [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((m) => (
-              <Skeleton key={m} style="lg:w-[14rem] lg:h-72 w-[7rem] h-[9rem" />
+              <Skeleton
+                key={m}
+                style="lg:w-[14rem] lg:h-72 w-[7rem] h-[9rem]"
+              />
             ))}
         </div>
         <Pagination setPage={setPage} page={page} />
