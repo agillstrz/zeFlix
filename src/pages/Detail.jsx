@@ -33,6 +33,7 @@ function Detail() {
       getVideo();
     }, 700);
   }, []);
+  console.log(data);
   return (
     <>
       {!data && <Loading />}
@@ -51,11 +52,10 @@ function Detail() {
           >
             <div className=" px-5  lg:bg-transparent bg-black/20 lg:pt-32 lg:px-14  pt-20   pb-20   w-full flex flex-col  justify-center  bg-gradient-to-r from-black to-transparent   min-h-screen   ">
               <p className="lg:text-2xl  text-[20px] text-white/80 uppercase lg:mt-0 pt-10">
-                Tv series
+                Movies
               </p>
               <h2 className=" text-white lg:text-[4rem] text-[19px] leading-tight font-semibold tracking-wide">
-                {data.title ? data.title : data.name} (
-                {data.first_air_date?.slice(0, 4)})
+                {data.title ? data.title : data.name} ({data?.release_date})
               </h2>
               <div className="flex gap-x-1 py-4">
                 {data.genres.map((m) => (

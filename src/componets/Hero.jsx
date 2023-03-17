@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { BsFillPlayCircleFill, BsPlayCircle } from "react-icons/bs";
 import ModalVideo from "./ModalVideo";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import zeFlix from "../api/get.api";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,6 +17,7 @@ function Hero() {
   const getMovies = () => {
     zeFlix.getMovies().then((res) => setMovies(res.data));
   };
+  let navigate = useNavigate();
 
   useEffect(() => {
     getData();
@@ -35,7 +36,7 @@ function Hero() {
             className="z-0"
           >
             {movies &&
-              movies.results.slice(0, 3).map((m) => (
+              movies.results.slice(0, 4).map((m) => (
                 <div
                   key={m.id}
                   className="   lg:h-screen relative h-[60vh] flex  w-full   items-center  bg-cover bg-center"
@@ -45,7 +46,10 @@ function Hero() {
                 >
                   <div className="bg-gradient-to-t   from-main/70 lg:from-main to-transparent absolute h-20 lg:h-36 w-full  bottom-0 "></div>
                   <div className="lg:w-[45%]  brightness-110 lg:brightness-100 lg:px-16  w-full flex flex-col gap-y-2 lg:justify-center justify-end lg:items-start  items-start     lg:bg-gradient-to-r from-main to-transparent     h-full ">
-                    <h2 className=" text-text/80  pl-3 lg:pl-0 text-[20px] lg:w-full w-[60%]  lg:text-[4rem] text-left lg:text-left leading-none font-semibold tracking-wide">
+                    <h2
+                      onClick={() => navigate(`/detail/${m.id}`)}
+                      className=" text-text/80  pl-3 lg:pl-0 text-[20px] lg:w-full w-[60%]  lg:text-[4rem] text-left lg:text-left leading-none font-semibold tracking-wide"
+                    >
                       {m.title ? m.title : m.name}
                     </h2>
                     <p className="text-white hidden lg:block lg:text-xl text-justify tracking-normal">

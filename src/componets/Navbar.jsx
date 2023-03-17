@@ -33,7 +33,7 @@ function Navbar() {
   };
   return (
     <div
-      className={` absolute z-[99] lg:pt-0 pt-3  flex flex-col lg:bg-transparent   lg:py-2 w-full`}
+      className={` absolute z-[99] lg:pt-0 pt-3  flex flex-col lg:bg-gradient-to-b from-main to-transparent   lg:py-2 w-full`}
     >
       <div className="px-4  lg:px-14 flex lg:justify-between gap-x-2  w-full justify-center  items-center">
         <div className="lg:w-full  items-center  flex  gap-x-10  lg:py-5">
@@ -82,13 +82,13 @@ function Navbar() {
           </span>
         </form>
       </div>
-      <ul className="flex justify-center lg:hidden text-sm  py-2 text-white gap-x-2">
+      <ul className="flex justify-center lg:hidden text-sm  py-2 text-white gap-x-5">
         {nav
           .filter((m) => m.nama !== "Home")
           .map((m, index) => (
             <li
               key={index}
-              className={`cursor-pointer group relative capitalize`}
+              className={`cursor-pointer group font-semibold relative capitalize`}
             >
               <NavLink
                 to={`${m.url}`}
