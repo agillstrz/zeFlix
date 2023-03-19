@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BiSearchAlt } from "react-icons/bi";
-import { NavLink, useLocation, useNavigate, useParams } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 function Navbar() {
   const [nama, setNama] = useState("");
   const { pathname } = useLocation();
@@ -51,7 +51,6 @@ function Navbar() {
               >
                 <NavLink
                   to={`${m.url}`}
-                  // to={`${m.url}`}
                   className={({ isActive }) => (isActive ? "text-text " : "")}
                 >
                   {m.nama}

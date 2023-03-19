@@ -1,6 +1,6 @@
 export const genre = [
   {
-    id: 10759,
+    id: 28,
     name: "Action & Adventure",
     foto: "https://ik.imagekit.io/oxmhan7av/actions.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1678108363927",
   },
@@ -46,14 +46,14 @@ export const genre = [
   },
 
   {
-    id: 10765,
-    name: "Sci-Fi & Fantasy",
+    id: 14,
+    name: "Fantasy",
     foto: "https://ik.imagekit.io/oxmhan7av/548a9010b546255d4a8ac93d19bdec5f.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1678108549981",
   },
 
   {
-    id: 10768,
-    name: "War & Politics",
+    id: 10752,
+    name: "War",
     foto: "https://ik.imagekit.io/oxmhan7av/war.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1678109314378",
   },
   {

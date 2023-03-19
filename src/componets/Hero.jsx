@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { IoMdInformationCircleOutline } from "react-icons/io";
-import { BsFillPlayCircleFill, BsPlayCircle } from "react-icons/bs";
-import ModalVideo from "./ModalVideo";
-import { Link, useNavigate } from "react-router-dom";
-import zeFlix from "../api/get.api";
-import "swiper/css";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { Carousel } from "flowbite-react";
+import React, { useEffect, useState } from "react";
+import { BsFillPlayCircleFill, BsPlayCircle } from "react-icons/bs";
+import { IoMdInformationCircleOutline } from "react-icons/io";
+import { Link, useNavigate } from "react-router-dom";
+import "swiper/css";
+import { Swiper } from "swiper/react";
+import zeFlix from "../api/get.api";
+import ModalVideo from "./ModalVideo";
 function Hero() {
   const [show, setShow] = useState(false);
   const [data, setData] = useState(null);

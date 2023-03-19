@@ -9,14 +9,13 @@ function Riviews({ id }) {
   useEffect(() => {
     getRiview();
   }, []);
-  console.log(riview.results == "");
   return (
     <>
       {riview && (
         <div className="lg:px-14 px-4 lg:pb-10">
           <h2 className="text-2xl font-semibold my-3 text-white">Riviews</h2>
           <div className="grid  lg:grid-cols-2 w-full gap-y-8   gap-x-3">
-            {riview.results == "" ? (
+            {riview.results === "" ? (
               <h1 className="text-white">-</h1>
             ) : (
               riview.results.map((m) => (
@@ -59,8 +58,6 @@ function Riviews({ id }) {
                 </div>
               ))
             )}
-
-            {/* <div className="w-1/2"></div> */}
           </div>
         </div>
       )}

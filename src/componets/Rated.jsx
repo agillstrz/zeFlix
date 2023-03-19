@@ -111,47 +111,6 @@ function Rated() {
             </SwiperSlide>
           ))}
       </Swiper>
-
-      {/* <div className="relative h-[18rem] mt-4   py-10  w-full">
-        <span className="absolute top-1/2 -left-3   -translate-y-1/2 z-[9999]">
-          <AiOutlineLeft
-            onClick={() => setSlide(0)}
-            className="text-5xl hover:text-white cursor-pointer text-white/50"
-          />
-        </span>
-        <span className="absolute top-1/2 -right-3   -translate-y-1/2 z-[9999]">
-          <AiOutlineRight
-            onClick={nextSlide}
-            className="text-5xl hover:text-white cursor-pointer text-white/50"
-          />
-        </span>
-        <div
-          className={`absolute  top-0  bg-main py-5 transition-all duration-500 ease-out flex justify-center  lg:gap-x-4 `}
-          style={{ transform: `translateX(-${slide * 20}%)` }}
-        >
-          {!data &&
-            [1, 2, 3, 4, 5, 6, 7].map((m) => (
-              <Skeleton key={m} width="10rem" height="15rem" />
-            ))}
-          {data &&
-            data.results
-              .slice(0, 11)
-              .map((m) => <CardPopular key={m.id} data={m} />)}
-          {data && (
-            <div
-              onClick={() => navigate("/rated")}
-              className="w-44 bg-text hidden relative hover:brightness-125 hover:w-44 h-60 bg-blend-saturation overflow-hidden backdrop-blur  lg:flex justify-center group items-center transition-all duration-250 ease-linear cursor-pointer"
-            >
-              <div className="absolute translate-x-0 font-semibold text-main  group-hover:-translate-x-[200%] flex items-center gap-x-1  transition-all duration-300 ">
-                <h2 className="  ">view more </h2>
-              </div>
-              <span className="absolute group-hover:translate-x-0 translate-x-[70%] flex justify-center items-center w-full h-full transition-all duration-300 ">
-                <HiArrowSmRight size={80} className=" font-bold text-main" />{" "}
-              </span>
-            </div>
-          )}
-        </div>
-      </div> */}
     </div>
   );
 }

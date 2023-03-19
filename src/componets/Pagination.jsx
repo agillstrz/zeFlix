@@ -17,15 +17,6 @@ function Pagination({ setPage, page }) {
       >
         Next
       </button>
-
-      {/* {data.map((m, index) => (
-        <button
-          key={index}
-          className="bg-black border py-2 px-5 border-white text-text"
-        >
-          {m}
-        </button>
-      ))} */}
     </div>
   );
 }

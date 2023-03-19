@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import zeflix from "../api/get.api";
-import Pagination from "../componets/Pagination";
 import Card from "../componets/Card";
 import GoToTop from "../componets/GoToTop";
-import CONSTANT from "../utils/constants";
-import axios from "axios";
 import Skeleton from "../componets/Loader/Skeleton";
+import Pagination from "../componets/Pagination";
 function Popular() {
   const [data, setData] = useState([]);
   const [load, setLoad] = useState(false);

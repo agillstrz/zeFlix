@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import zeflix from "../api/get.api";
+import React, { useState } from "react";
 import { SiSpinrilla } from "react-icons/si";
 import CONSTANT from "../utils/constants";
 
